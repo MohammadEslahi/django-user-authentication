@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+    <h1>Create an account</h1>
+    
+    {% if message %}
+        {{message}}
+    {% endif %}
+    {% if registered %}
+    {% if username %}
+        <p>Registration successful for {{ username }}!</p>
+    {% endif %}
+    {% endif %}
+    
+    <p>Your username is: {{ username }}</p>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <label>Username:</label>
+        <input type="text" name="username" required>
+        <label>password</label>
+        <input type="password" name="password" required>
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

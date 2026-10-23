@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First Django Website</title>
+</head>
+<body>
+    <h1>Welcome to my website, {{username}} from {{city}}!</h1>
+    <form method="get">
+        <input type="text" name="username">
+        <select name="city">
+            <option value="Berlin">
+                Berlin
+            </option>
+            <option value="London">
+                London
+            </option>
+        </select>
+        <button type="submit">
+            submit
+        </button>
+    </form>
+    <p>This page is rendered using a Django template.</p>
+</body>
+</html>
